@@ -1,0 +1,66 @@
+<div >
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="District">
+      <mat-header-cell *matHeaderCellDef> District </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.districtname}} </mat-cell>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="Confirmed">
+      <mat-header-cell *matHeaderCellDef> Confirmed </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.confirmed}} </mat-cell>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="Recovered">
+      <mat-header-cell *matHeaderCellDef> Recovered </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.recovered}} </mat-cell>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="Deaths">
+      <mat-header-cell *matHeaderCellDef> Deaths </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.deceased}} </mat-cell>
+    </ng-container> 
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table> 
+
+</div>
+
+<!-- 
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
+    </ng-container>
+  
+   
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
+    </ng-container> 
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+ -->
+
+
+

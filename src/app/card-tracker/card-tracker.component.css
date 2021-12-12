@@ -1,0 +1,47 @@
+.card{
+    max-width: 400px;
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.confirmed-card {
+    max-width: 400px;
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+   
+    background-color: rgb(241, 217, 225); 
+    
+}
+
+
+
+.recovery-card{
+    max-width: 400px;
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(221, 241, 210);
+}
+
+.deaths-card{
+    max-width: 400px;
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(210, 224, 241);
+}
+
+.confirmed-text{
+    color: red;
+}
+
+.recovery-text{
+    color:seagreen;
+}
+
+.deaths-text{
+    color:slategray;
+}
+

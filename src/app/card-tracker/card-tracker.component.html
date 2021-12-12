@@ -1,0 +1,74 @@
+<!-- <mat-card class="confirmed-card">
+    <mat-card-content  [ngStyle]="{'font-size':'30px', 'color':'red','font-weight': 'bold'}">
+
+        {{confirmed|number:'8.0'}}
+    </mat-card-content>
+
+    <mat-card-subtitle  class="confirmed-text" >
+        Confirmed
+    </mat-card-subtitle>
+
+</mat-card>
+
+<mat-card class="recovery-card">
+    <mat-card-content [ngStyle]="{'font-size':'30px', 'color':'seagreen','font-weight': 'bold'}">
+
+        {{recovered|number:'8.0'}}
+    </mat-card-content>
+
+    <mat-card-subtitle class="recovery-text">
+        Recovered
+    </mat-card-subtitle>
+
+</mat-card>
+
+<mat-card class="deaths-card">
+    <mat-card-content [ngStyle]="{'font-size':'30px', 'color':'slategray','font-weight': 'bold'}">
+
+        {{deceased|number:'6.0'}}
+    </mat-card-content>
+
+    <mat-card-subtitle class="deaths-text">
+        Deaths
+    </mat-card-subtitle>
+
+</mat-card> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div *ngFor="let card of cards" class="col-xs-12 col-md-4 col-lg-4">
+            <mat-card [ngStyle]="{
+            'text-align': 'center', 'background-color':card.bckgrndcolour,
+            'margin-right':'0px'}">
+
+                <mat-card-content [ngStyle]="{'font-size':'30px', 'color':card.txtcolour,'font-weight': 'bold'}">
+                    {{card.cardcontent|number:card.length}}
+                </mat-card-content>
+
+                <mat-card-subtitle [ngStyle]="{'color':card.txtcolour}">
+                    {{card.cardsub}}
+                </mat-card-subtitle>
+
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="container">
+    <div class="row justify-content-center">
+<div  *ngFor="let card of cards" class="col-4">
+<div class="card" [ngStyle]="{'width':'150px',
+    'text-align': 'center', 'background-color':card.bckgrndcolour,
+'margin-right':'0px'}">
+<div class="card-body">
+
+    <h5 class="card-title" [ngStyle]="{'font-size':'30px', 'color':card.txtcolour,'font-weight': 'bold'}">
+        {{card.cardcontent|number:card.length}} </h5>
+
+    <p class="card-text" [ngStyle]="{'color':card.txtcolour}">
+        {{card.cardsub}}
+    </p>
+
+</div>
+</div>
+</div>
+</div> -->

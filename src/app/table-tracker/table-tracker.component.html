@@ -1,0 +1,31 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="State">
+      <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+      (click)="getStateName($event.target.innerText)"> {{element.state}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Confirmed1">
+      <mat-header-cell *matHeaderCellDef> Confirmed </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.confirmed}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Recovered">
+      <mat-header-cell *matHeaderCellDef> Recovered </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.recovered}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Deaths">
+      <mat-header-cell *matHeaderCellDef> Deaths </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.deaths}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+<p></p>
+
